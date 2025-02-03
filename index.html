@@ -114,18 +114,15 @@
         // Apply animation to make the 'Yes' button grow each time 'No' is clicked
         let yesButton = document.querySelector('.btn--yes');
         yesButton.style.animation = 'growYes 0.5s forwards'; // Make "Yes" button grow
-
         // You can also make the "No" button move to make it harder to click
         let noButton = document.querySelector('.btn--no');
         noButton.style.animation = 'moveButton 0.5s ease-out forwards'; // Move "No" button
-
         // Reset the animations after the grow
         setTimeout(function() {
           yesButton.style.animation = '';
           noButton.style.animation = '';
         }, 500);
       }
-
       // Function to return a convincing message based on the number of attempts
       function getConvincingMessage(attempts) {
         if (attempts === 1) {
