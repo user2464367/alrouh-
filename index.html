@@ -101,3 +101,83 @@
     </script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine</title>
+    <style>
+      body {
+        background-color: #007bff; /* Blue background */
+        font-family: 'Protest Riot', sans-serif;
+        color: #ffcc00; /* Yellow text */
+        text-align: center;
+        padding: 20px;
+      }
+
+      .title {
+        font-size: 2em;
+        margin: 20px 0;
+      }
+
+      .buttons button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .btn--yes {
+        background-color: #28a745; /* Green for Yes */
+        color: white;
+      }
+
+      .btn--no {
+        background-color: #dc3545; /* Red for No */
+        color: white;
+      }
+
+      .btn--yes:hover {
+        background-color: #218838; /* Dark Green */
+      }
+
+      .btn--no:hover {
+        background-color: #c82333; /* Dark Red */
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <p class="title">Lamar, Will you be my Valentine?</p>
+      <input type="text" id="name-input" placeholder="Enter your name here" />
+      <button onclick="updateName()">Update Name</button>
+
+      <div class="buttons">
+        <button type="button" class="btn btn--yes">Yes</button>
+        <button type="button" class="btn btn--no">No</button>
+      </div>
+    </main>
+
+    <script type="module">
+      // Function to update the title with the name
+      function updateName() {
+        const nameInput = document.getElementById("name-input");
+        const title = document.querySelector(".title");
+
+        // Update the title with the name entered
+        title.textContent = `${nameInput.value}, will you be my Valentine?`;
+      }
+    </script>
+  </body>
+</html>
