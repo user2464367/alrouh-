@@ -114,15 +114,18 @@
         // Apply animation to make the 'Yes' button grow each time 'No' is clicked
         let yesButton = document.querySelector('.btn--yes');
         yesButton.style.animation = 'growYes 0.5s forwards'; // Make "Yes" button grow
+
         // You can also make the "No" button move to make it harder to click
         let noButton = document.querySelector('.btn--no');
         noButton.style.animation = 'moveButton 0.5s ease-out forwards'; // Move "No" button
+
         // Reset the animations after the grow
         setTimeout(function() {
           yesButton.style.animation = '';
           noButton.style.animation = '';
         }, 500);
       }
+
       // Function to return a convincing message based on the number of attempts
       function getConvincingMessage(attempts) {
         if (attempts === 1) {
@@ -138,5 +141,51 @@
         }
       }
     </script>
+    <script type="module">
+  let attempts = 0; // Track how many times "No" was clicked
+
+  // Function for "Yes" answer
+  function answerYes() {
+    alert("Yay! 💖 You said Yes! Can't wait to celebrate with you!");
+  }
+
+  // Function for "No" answer, it will show a convincing message and make "Yes" grow
+  function answerNo(button) {
+    attempts++; // Increment the number of attempts
+    let convincingMessage = getConvincingMessage(attempts);
+
+    // Change the text of the button instead of using alert
+    button.textContent = convincingMessage;
+
+    // Apply animation to make the 'Yes' button grow each time 'No' is clicked
+    let yesButton = document.querySelector('.btn--yes');
+    yesButton.style.animation = 'growYes 0.5s forwards'; // Make "Yes" button grow
+
+    // You can also make the "No" button move to make it harder to click
+    let noButton = document.querySelector('.btn--no');
+    noButton.style.animation = 'moveButton 0.5s ease-out forwards'; // Move "No" button
+
+    // Reset the animations after the grow
+    setTimeout(function() {
+      yesButton.style.animation = '';
+      noButton.style.animation = '';
+    }, 500);
+  }
+
+  // Function to return a convincing message based on the number of attempts
+  function getConvincingMessage(attempts) {
+    if (attempts === 1) {
+      return "Oh Lamar, please! You know I'm here for you. 💖 Don't say No! 😢";
+    } else if (attempts === 2) {
+      return "Aww come on Lamar, you can't leave me hanging! 😭 Let's make this special! 💙";
+    } else if (attempts === 3) {
+      return "Please Lamar, just say Yes! I promise you won't regret it. 😍💙";
+    } else if (attempts === 4) {
+      return "Lamar, you're making me nervous! Please, I need you to say Yes! 💙✨";
+    } else {
+      return "I can't wait forever, Lamar! 😅 Please say Yes, I'm all in for us. 💙💖";
+    }
+  }
+</script>
   </body>
 </html>
