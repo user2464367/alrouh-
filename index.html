@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Valentine</title>
-  </head>
-  <body>
-    <main class="container">
-      <img class="cat-img" src="img/cat-0.jpg" alt="Picture of a cat" />
-      <p class="title">Will you be my Valentine?</p>
-      <div class="buttons">
-        <button type="button" class="btn btn--yes">Yes</button>
-        <button type="button" class="btn btn--no">No</button>
-      </div>
-    </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Lamar ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #333;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #d63384;
+        }
+        p {
+            font-size: 18px;
+        }
+        button {
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
 
-    <script type="module" src="script.js"></script>
-  </body>
+    <div class="container">
+        <h1>My Dearest Lamar ❤️</h1>
+        <p id="message">Lamar, I know you're upset, and that breaks my heart. But remember, you are my world, and I will always be here to make you smile again.</p>
+        <button onclick="changeMessage()">Click for More Love</button>
+    </div>
+
+    <script>
+        function changeMessage() {
+            document.getElementById("message").innerHTML = "Lamar, you are the most precious person in my life, and I will do whatever it takes to make you happy again. I love you endlessly. ❤️";
+        }
+    </script>
+
+</body>
 </html>
